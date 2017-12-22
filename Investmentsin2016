@@ -1,0 +1,7 @@
+Select sum(distinct i1.TIV_2016) AS TIV_2016
+from insurance i1, insurance i2
+where i1.PID != i2.PID AND i1.TIV_2015 = i2.TIV_2015
+AND (i1.LAT, i1.LON) NOT IN
+(Select LAT, LON from insurance group by LAT, LON
+having count(*) > 1)
+
