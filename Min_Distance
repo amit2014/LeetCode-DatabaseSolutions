@@ -1,0 +1,4 @@
+SELECT round(min(sqrt((power(t1.x - t2.x),2) + (power(t1.x - t2.x),2) )),2)
+as shortest
+from point_2d t1 join point_2d t2
+on t1.x != t2.x or t1.y != t2.y
