@@ -1,0 +1,4 @@
+Select t1.question_id as survey_log from
+(question_id from survey_log where answer_id IS NOT NULL)t1
+Group by t1.question_id
+Order by count(t1.question_id)Desc Limit 1 
