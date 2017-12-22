@@ -1,0 +1,4 @@
+Select Name from Candidate
+where id = 
+(Select CandidateId from Vote group by CandidateId
+order by count(CandidateID) desc limit 1)
