@@ -1,7 +1,7 @@
 CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
 BEGIN 
-DECLARE m int
-SET M  = n-1
+DECLARE m int;
+SET M  = n-1;
   RETURN (
       # Write your MySQL query statement below.
      Select distinct salary
